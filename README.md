@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # AEM WKND Sites Project
 
 ## Adobe Experience Manager compatibility
@@ -94,3 +95,6 @@ With Adobe Stock, you have access to more than 140 million high-quality, royalty
 
 * This project was generated using the [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html).
 * This project relies on [AEM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html).
+=======
+# aem-guides-wknd
+>>>>>>> e3d01191b4d10c8ff5b4abfc07d6adcc88e863a3
