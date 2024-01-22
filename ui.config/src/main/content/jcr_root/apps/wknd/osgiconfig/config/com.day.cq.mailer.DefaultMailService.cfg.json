@@ -1,0 +1,12 @@
+{
+    "smtp.host": "smtp.freesmtpservers.com",
+    "smtp.user": "",
+    "smtp.password": "",
+    "smtp.port": 25,
+    "from.address": "mpma06@aem.com",
+    "smtp.ssl": false,
+    "smtp.starttls": false,
+    "smtp.requiretls": false,
+    "debug.email": false,
+    "oauth.flow": false
+}

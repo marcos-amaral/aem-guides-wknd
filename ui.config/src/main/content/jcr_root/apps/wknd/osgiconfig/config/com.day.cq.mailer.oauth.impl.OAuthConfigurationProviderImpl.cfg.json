@@ -1,0 +1,12 @@
+{
+    "authUrl": "https://accounts.google.com/o/oauth2/auth",
+    "tokenUrl": "https://oauth2.googleapis.com/token",
+    "clientId": "",
+    "clientSecret": "",
+    "scopes": [
+       "https://www.googleapis.com/auth/gmail.send"
+    ],
+    "authCodeRedirectUrl": "http://localhost:4502/services/mailer/oauth2/token",
+    "refreshUrl": "https://accounts.google.com/o/oauth2/token",
+    "refreshToken": ""
+}
