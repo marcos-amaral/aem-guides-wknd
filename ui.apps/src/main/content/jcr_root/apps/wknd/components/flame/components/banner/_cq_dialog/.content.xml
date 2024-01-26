@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+		  xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+		  xmlns:cq="http://www.day.com/jcr/cq/1.0"
+		  xmlns:jcr="http://www.jcp.org/jcr/1.0"
+		  xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+		  jcr:primaryType="nt:unstructured"
+		  jcr:title="Banner - Flame"
+		  extraClientlibs="[cq.author.showhide]"
+		  sling:resourceType="cq/gui/components/authoring/dialog"
+		  helpPath="/mnt/overlay/wcm/core/content/sites/components/details.html/apps/santander-spa-first/components/flame/components/banner">
+	<content
+			jcr:primaryType="nt:unstructured"
+			sling:resourceType="granite/ui/components/foundation/container">
+		<items jcr:primaryType="nt:unstructured">
+			<tabs
+					jcr:primaryType="nt:unstructured"
+					sling:resourceType="granite/ui/components/coral/foundation/tabs"
+					maximized="{Boolean}true">
+				<items jcr:primaryType="nt:unstructured">
+					<bannerModel
+							jcr:primaryType="nt:unstructured"
+							jcr:title="Modelo de Banner"
+							sling:resourceType="granite/ui/components/coral/foundation/container"
+							margin="{Boolean}true">
+						<items jcr:primaryType="nt:unstructured">
+							<bannerModel
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/foundation/include"
+									path="/apps/santander-spa-first/components/reusable/dialog/cq:dialog/content/items/bannerModel"/>
+						</items>
+					</bannerModel>
+					<typography
+							jcr:primaryType="nt:unstructured"
+							jcr:title="Tipografia"
+							sling:resourceType="granite/ui/components/coral/foundation/container"
+							margin="{Boolean}true">
+						<items jcr:primaryType="nt:unstructured">
+							<primaryText
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/foundation/include"
+									path="/apps/santander-spa-first/components/reusable/dialog/cq:dialog/content/items/primaryText"/>
+							<secondaryText
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/foundation/include"
+									path="/apps/santander-spa-first/components/reusable/dialog/cq:dialog/content/items/secondaryText"/>
+							<tertiaryText
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/foundation/include"
+									path="/apps/santander-spa-first/components/reusable/dialog/cq:dialog/content/items/tertiaryText"/>
+						</items>
+					</typography>
+					<image
+							jcr:primaryType="nt:unstructured"
+							jcr:title="Imagem"
+							sling:resourceType="granite/ui/components/coral/foundation/container"
+							margin="{Boolean}true">
+						<items jcr:primaryType="nt:unstructured">
+							<image
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/foundation/include"
+									path="/apps/santander-spa-first/components/reusable/dialog/cq:dialog/content/items/image"/>
+							<mobileImage
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/foundation/include"
+									path="/apps/santander-spa-first/components/reusable/dialog/cq:dialog/content/items/mobileImage"/>
+						</items>
+					</image>
+					<button
+							jcr:primaryType="nt:unstructured"
+							jcr:title="Botão"
+							sling:resourceType="granite/ui/components/coral/foundation/container"
+							margin="{Boolean}true">
+						<items jcr:primaryType="nt:unstructured">
+							<primaryButton
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/foundation/include"
+									path="/apps/santander-spa-first/components/reusable/dialog/cq:dialog/content/items/primaryButton"/>
+							<secondaryButton
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/foundation/include"
+									path="/apps/santander-spa-first/components/reusable/dialog/cq:dialog/content/items/secondaryButton"/>
+						</items>
+					</button>
+					<backgroundOptions
+							jcr:primaryType="nt:unstructured"
+							jcr:title="Opções de Plano de Fundo"
+							sling:resourceType="granite/ui/components/coral/foundation/container"
+							margin="{Boolean}true">
+						<items jcr:primaryType="nt:unstructured">
+							<backgroundOptions
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/foundation/include"
+									path="/apps/santander-spa-first/components/reusable/dialog/cq:dialog/content/items/backgroundOptions"/>
+						</items>
+					</backgroundOptions>
+				</items>
+			</tabs>
+		</items>
+	</content>
+</jcr:root>

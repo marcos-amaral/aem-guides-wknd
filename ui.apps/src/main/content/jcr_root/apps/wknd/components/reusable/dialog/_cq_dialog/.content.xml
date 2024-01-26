@@ -1,0 +1,1358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+		  xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+		  xmlns:cq="http://www.day.com/jcr/cq/1.0"
+		  xmlns:jcr="http://www.jcp.org/jcr/1.0"
+		  xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+		  jcr:primaryType="nt:unstructured"
+		  jcr:title="Reusable Dialog Fields"
+		  extraClientlibs="[cq.author.showhide]"
+		  sling:resourceType="cq/gui/components/authoring/dialog">
+	<content
+			granite:class="core-wcm-list-v1"
+			jcr:primaryType="nt:unstructured"
+			sling:resourceType="granite/ui/components/coral/foundation/container">
+		<items jcr:primaryType="nt:unstructured">
+			<image
+					jcr:primaryType="nt:unstructured"
+					sling:resourceType="granite/ui/components/coral/foundation/accordion"
+					composite="{Boolean}true"
+					name="./image">
+				<items jcr:primaryType="nt:unstructured">
+					<item jcr:primaryType="nt:unstructured"
+						  sling:resourceType="granite/ui/components/coral/foundation/well"
+						  jcr:title="Imagem">
+						<items jcr:primaryType="nt:unstructured">
+							<image
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+									allowUpload="{Boolean}false"
+									autoStart="{Boolean}false"
+									class="cq-droptarget"
+									fieldLabel="Imagem"
+									fileNameParameter="./image/imageName"
+									fileReferenceParameter="./image/imageReference"
+									mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+									multiple="{Boolean}false"
+									name="./image/fileReference"
+									title="Upload Image Asset"
+									uploadUrl="${suffix.path}"
+									useHTML5="{Boolean}true"/>
+							<alt
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+									fieldLabel="Texto Auxiliar"
+									maxlength="255"
+									name="./image/altText"/>
+						</items>
+					</item>
+				</items>
+			</image>
+			<mobileImage
+					jcr:primaryType="nt:unstructured"
+					sling:resourceType="granite/ui/components/coral/foundation/accordion"
+					composite="{Boolean}true"
+					name="./mobileImage">
+				<items jcr:primaryType="nt:unstructured">
+					<item jcr:primaryType="nt:unstructured"
+						  sling:resourceType="granite/ui/components/coral/foundation/well"
+						  jcr:title="Imagem para Dispositivo Móveis">
+						<items jcr:primaryType="nt:unstructured">
+							<image
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+									allowUpload="{Boolean}false"
+									autoStart="{Boolean}false"
+									class="cq-droptarget"
+									fieldLabel="Imagem"
+									fileNameParameter="./mobileImage/imageName"
+									fileReferenceParameter="./mobileImage/imageReference"
+									mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+									multiple="{Boolean}false"
+									name="./mobileImage/fileReference"
+									title="Upload Image Asset"
+									uploadUrl="${suffix.path}"
+									useHTML5="{Boolean}true"
+									rootPath="/content/dam/assets-santander/ready"/>
+							<alt
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+									fieldLabel="Texto Auxiliar"
+									maxlength="255"
+									name="./mobileImage/altText"/>
+						</items>
+					</item>
+				</items>
+			</mobileImage>
+			<typography
+					jcr:primaryType="nt:unstructured"
+					sling:resourceType="granite/ui/components/coral/foundation/accordion"
+					composite="{Boolean}true"
+					name="./typography">
+				<items jcr:primaryType="nt:unstructured">
+					<item jcr:primaryType="nt:unstructured"
+						  sling:resourceType="granite/ui/components/coral/foundation/well"
+						  jcr:title="Tipografia">
+						<items jcr:primaryType="nt:unstructured">
+							<primaryText
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/foundation/form/textfield"
+									fieldLabel="Texto"
+									maxlength="255"
+									name="./typography/text"/>
+							<primaryTextType
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/coral/foundation/form/select"
+									fieldLabel="Tipo de Fonte"
+									name="./typography/textType">
+								<datasource
+										jcr:primaryType="nt:unstructured"
+										sling:resourceType="/bin/jsonDataDropdown"
+										jsonDataPath="/apps/santander-spa-first/datasource/flame-text-styles.json"/>
+							</primaryTextType>
+							<primaryTextColor
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/coral/foundation/form/select"
+									fieldLabel="Cor do Texto"
+									name="./typography/textColor">
+								<datasource
+										jcr:primaryType="nt:unstructured"
+										sling:resourceType="/bin/jsonDataDropdown"
+										jsonDataPath="/apps/santander-spa-first/datasource/flame-colors.json"/>
+							</primaryTextColor>
+							<primaryTextStyle
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/coral/foundation/form/select"
+									fieldLabel="Estilo do Texto"
+									name="./typography/textStyle">
+								<items jcr:primaryType="nt:unstructured">
+									<true
+											jcr:primaryType="nt:unstructured"
+											text="Negrito"
+											value="true"/>
+									<none
+											jcr:primaryType="nt:unstructured"
+											text="Sem Negrito"
+											value="false"/>
+								</items>
+							</primaryTextStyle>
+						</items>
+					</item>
+				</items>
+			</typography>
+			<primaryText
+					jcr:primaryType="nt:unstructured"
+					sling:resourceType="granite/ui/components/coral/foundation/accordion"
+					composite="{Boolean}true"
+					name="./primaryText">
+				<items jcr:primaryType="nt:unstructured">
+					<item jcr:primaryType="nt:unstructured"
+						  sling:resourceType="granite/ui/components/coral/foundation/well"
+						  jcr:title="Texto Primário">
+						<items jcr:primaryType="nt:unstructured">
+							<selectTextType
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/foundation/form/select"
+									class="cq-dialog-dropdown-showhide-multival"
+									cq-dialog-dropdown-showhide-target=".primary-textTypeHtml-showhide-target"
+									fieldLabel="Tipo de Texto"
+									name="./primaryText/textTypeHtml">
+								<items jcr:primaryType="nt:unstructured">
+									<textOption
+											jcr:primaryType="nt:unstructured"
+											text="Text"
+											value="text"/>
+									<htmlOption
+											jcr:primaryType="nt:unstructured"
+											text="HTML"
+											value="html"/>
+								</items>
+							</selectTextType>
+							<textOptions
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/foundation/container"
+									class="primary-textTypeHtml-showhide-target"
+									showhidetargetvalue="text">
+								<items jcr:primaryType="nt:unstructured">
+									<primaryText
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/foundation/form/textfield"
+											fieldLabel="Texto"
+											maxlength="255"
+											name="./primaryText/text"/>
+									<primaryTextType
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/select"
+											fieldLabel="Tipo de Fonte"
+											name="./primaryText/textType">
+										<datasource
+												jcr:primaryType="nt:unstructured"
+												sling:resourceType="/bin/jsonDataDropdown"
+												jsonDataPath="/apps/santander-spa-first/datasource/flame-text-styles.json"/>
+									</primaryTextType>
+									<primaryTextColor
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/select"
+											fieldLabel="Cor do Texto"
+											name="./primaryText/textColor">
+										<datasource
+												jcr:primaryType="nt:unstructured"
+												sling:resourceType="/bin/jsonDataDropdown"
+												jsonDataPath="/apps/santander-spa-first/datasource/flame-colors.json"/>
+									</primaryTextColor>
+									<primaryTextStyle
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/select"
+											fieldLabel="Estilo do Texto"
+											name="./primaryText/textStyle">
+										<items jcr:primaryType="nt:unstructured">
+											<true
+													jcr:primaryType="nt:unstructured"
+													text="Negrito"
+													value="true"/>
+											<none
+													jcr:primaryType="nt:unstructured"
+													text="Sem Negrito"
+													value="false"/>
+										</items>
+									</primaryTextStyle>
+								</items>
+							</textOptions>
+							<htmlOption
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/foundation/container"
+									class="hide primary-textTypeHtml-showhide-target"
+									showhidetargetvalue="html">
+								<items jcr:primaryType="nt:unstructured">
+									<primaryText
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/foundation/form/textarea"
+											fieldLabel="HTML"
+											maxlength="3000"
+											name="./primaryText/textHtml"/>
+								</items>
+							</htmlOption>
+						</items>
+					</item>
+				</items>
+			</primaryText>
+			<secondaryText
+					jcr:primaryType="nt:unstructured"
+					sling:resourceType="granite/ui/components/coral/foundation/accordion"
+					composite="{Boolean}true"
+					name="./secondaryText">
+				<items jcr:primaryType="nt:unstructured">
+					<item jcr:primaryType="nt:unstructured"
+						  sling:resourceType="granite/ui/components/coral/foundation/well"
+						  jcr:title="Texto Secundário">
+						<items jcr:primaryType="nt:unstructured">
+							<selectTextType
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/foundation/form/select"
+									class="cq-dialog-dropdown-showhide-multival"
+									cq-dialog-dropdown-showhide-target=".secondary-textTypeHtml-showhide-target"
+									fieldLabel="Tipo de Texto"
+									name="./secondaryText/textTypeHtml">
+								<items jcr:primaryType="nt:unstructured">
+									<textOption
+											jcr:primaryType="nt:unstructured"
+											text="Text"
+											value="text"/>
+									<htmlOption
+											jcr:primaryType="nt:unstructured"
+											text="HTML"
+											value="html"/>
+								</items>
+							</selectTextType>
+							<secondaryTextOption
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/foundation/container"
+									class="secondary-textTypeHtml-showhide-target"
+									showhidetargetvalue="text">
+								<items jcr:primaryType="nt:unstructured">
+									<secondaryText
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/foundation/form/textfield"
+											fieldLabel="Texto"
+											maxlength="255"
+											name="./secondaryText/text"/>
+									<secondaryTextType
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/select"
+											fieldLabel="Tipo de Fonte"
+											name="./secondaryText/textType">
+										<datasource
+												jcr:primaryType="nt:unstructured"
+												sling:resourceType="/bin/jsonDataDropdown"
+												jsonDataPath="/apps/santander-spa-first/datasource/flame-text-styles.json"/>
+									</secondaryTextType>
+									<secondaryTextColor
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/select"
+											fieldLabel="Cor do Texto"
+											name="./secondaryText/textColor">
+										<datasource
+												jcr:primaryType="nt:unstructured"
+												sling:resourceType="/bin/jsonDataDropdown"
+												jsonDataPath="/apps/santander-spa-first/datasource/flame-colors.json"/>
+									</secondaryTextColor>
+									<secondaryTextStyle
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/select"
+											fieldLabel="Estilo do Texto"
+											name="./secondaryText/textStyle">
+										<items jcr:primaryType="nt:unstructured">
+											<true
+													jcr:primaryType="nt:unstructured"
+													text="Negrito"
+													value="true"/>
+											<none
+													jcr:primaryType="nt:unstructured"
+													text="Sem Negrito"
+													value="false"/>
+										</items>
+									</secondaryTextStyle>
+								</items>
+							</secondaryTextOption>
+							<secondaryhtmlOption
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/foundation/container"
+									class="hide secondary-textTypeHtml-showhide-target"
+									showhidetargetvalue="html">
+								<items jcr:primaryType="nt:unstructured">
+									<secondaryText
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/foundation/form/textarea"
+											fieldLabel="HTML"
+											maxlength="3000"
+											name="./secondaryText/textHtml"/>
+
+								</items>
+							</secondaryhtmlOption>
+						</items>
+					</item>
+				</items>
+			</secondaryText>
+			<tertiaryText
+					jcr:primaryType="nt:unstructured"
+					sling:resourceType="granite/ui/components/coral/foundation/accordion"
+					composite="{Boolean}true"
+					name="./tertiaryText">
+				<items jcr:primaryType="nt:unstructured">
+					<item jcr:primaryType="nt:unstructured"
+						  sling:resourceType="granite/ui/components/coral/foundation/well"
+						  jcr:title="Texto Terciário">
+						<items jcr:primaryType="nt:unstructured">
+							<selectTextType
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/foundation/form/select"
+									class="cq-dialog-dropdown-showhide-multival"
+									cq-dialog-dropdown-showhide-target=".tertiary-textTypeHtml-showhide-target"
+									fieldLabel="Tipo de Texto"
+									name="./tertiaryText/textTypeHtml">
+								<items jcr:primaryType="nt:unstructured">
+									<textOption
+											jcr:primaryType="nt:unstructured"
+											text="Text"
+											value="text"/>
+									<htmlOption
+											jcr:primaryType="nt:unstructured"
+											text="HTML"
+											value="html"/>
+								</items>
+							</selectTextType>
+							<tertiaryTextOption
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/foundation/container"
+									class="tertiary-textTypeHtml-showhide-target"
+									showhidetargetvalue="text">
+								<items jcr:primaryType="nt:unstructured">
+									<tertiaryText
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/foundation/form/textfield"
+											fieldLabel="Texto"
+											maxlength="255"
+											name="./tertiaryText/text"/>
+									<tertiaryTextType
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/select"
+											fieldLabel="Tipo de Fonte"
+											name="./tertiaryText/textType">
+										<datasource
+												jcr:primaryType="nt:unstructured"
+												sling:resourceType="/bin/jsonDataDropdown"
+												jsonDataPath="/apps/santander-spa-first/datasource/flame-text-styles.json"/>
+									</tertiaryTextType>
+									<tertiaryTextColor
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/select"
+											fieldLabel="Cor do Texto"
+											name="./tertiaryText/textColor">
+										<datasource
+												jcr:primaryType="nt:unstructured"
+												sling:resourceType="/bin/jsonDataDropdown"
+												jsonDataPath="/apps/santander-spa-first/datasource/flame-colors.json"/>
+									</tertiaryTextColor>
+									<tertiaryTextStyle
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/select"
+											fieldLabel="Estilo do Texto"
+											name="./tertiaryText/textStyle">
+										<items jcr:primaryType="nt:unstructured">
+											<true
+													jcr:primaryType="nt:unstructured"
+													text="Negrito"
+													value="true"/>
+											<none
+													jcr:primaryType="nt:unstructured"
+													text="Sem Negrito"
+													value="false"/>
+										</items>
+									</tertiaryTextStyle>
+
+								</items>
+							</tertiaryTextOption>
+							<tertiaryhtmlOption
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/foundation/container"
+									class="hide tertiary-textTypeHtml-showhide-target"
+									showhidetargetvalue="html">
+								<items jcr:primaryType="nt:unstructured">
+									<tertiaryText
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/foundation/form/textarea"
+											fieldLabel="HTML"
+											maxlength="3000"
+											name="./tertiaryText/textHtml"/>
+
+								</items>
+							</tertiaryhtmlOption>
+						</items>
+					</item>
+				</items>
+			</tertiaryText>
+			<button
+					jcr:primaryType="nt:unstructured"
+					sling:resourceType="granite/ui/components/coral/foundation/accordion"
+					composite="{Boolean}true"
+					name="./button">
+				<items jcr:primaryType="nt:unstructured">
+					<item jcr:primaryType="nt:unstructured"
+						  sling:resourceType="granite/ui/components/coral/foundation/well"
+						  jcr:title="Botão">
+						<items jcr:primaryType="nt:unstructured">
+							<cta_text
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+									fieldLabel="Texto do Botão"
+									maxlength="50"
+									name="./button/buttonText"/>
+							<cta_link
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+									fieldLabel="URL do Botão"
+									name="./button/buttonLink"
+									rootPath="/content"/>
+							<cta_target
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/coral/foundation/form/select"
+									fieldLabel="Target do Botão"
+									name="./button/buttonTarget">
+								<items jcr:primaryType="nt:unstructured">
+									<links
+											jcr:primaryType="nt:unstructured"
+											text="Blank"
+											value="_blank"/>
+									<teaser
+											jcr:primaryType="nt:unstructured"
+											text="Self"
+											value="_self"/>
+								</items>
+							</cta_target>
+							<cta_style
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/coral/foundation/form/select"
+									fieldLabel="Estilo do Botão"
+									name="./button/buttonStyle">
+								<items jcr:primaryType="nt:unstructured">
+									<text
+											jcr:primaryType="nt:unstructured"
+											text="Text Style Button"
+											value="dss-button dss-button--text"/>
+									<primary
+											jcr:primaryType="nt:unstructured"
+											text="Primary Style Button"
+											value="dss-button dss-button--primary"/>
+									<secondary
+											jcr:primaryType="nt:unstructured"
+											text="Secondary Style Button"
+											value="dss-button dss-button--secondary"/>
+									<none
+											jcr:primaryType="nt:unstructured"
+											text="None"
+											value=""/>
+								</items>
+							</cta_style>
+						</items>
+					</item>
+				</items>
+			</button>
+			<primaryButton
+					jcr:primaryType="nt:unstructured"
+					sling:resourceType="granite/ui/components/coral/foundation/accordion"
+					composite="{Boolean}true"
+					name="./primaryButton">
+				<items jcr:primaryType="nt:unstructured">
+					<item jcr:primaryType="nt:unstructured"
+						  sling:resourceType="granite/ui/components/coral/foundation/well"
+						  jcr:title="Botão Primário">
+						<items jcr:primaryType="nt:unstructured">
+							<cta_text
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+									fieldLabel="Texto do Botão"
+									maxlength="50"
+									name="./primaryButton/buttonText"/>
+							<cta_link
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+									fieldLabel="URL do Botão"
+									name="./primaryButton/buttonLink"
+									rootPath="/content"/>
+							<cta_target
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/coral/foundation/form/select"
+									fieldLabel="Target do Botão"
+									name="./primaryButton/buttonTarget">
+								<items jcr:primaryType="nt:unstructured">
+									<links
+											jcr:primaryType="nt:unstructured"
+											text="Blank"
+											value="_blank"/>
+									<teaser
+											jcr:primaryType="nt:unstructured"
+											text="Self"
+											value="_self"/>
+								</items>
+							</cta_target>
+							<cta_style
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/coral/foundation/form/select"
+									fieldLabel="Estilo do Botão"
+									name="./primaryButton/buttonStyle">
+								<items jcr:primaryType="nt:unstructured">
+									<text
+											jcr:primaryType="nt:unstructured"
+											text="Text Style Button"
+											value="dss-button dss-button--text"/>
+									<primary
+											jcr:primaryType="nt:unstructured"
+											text="Primary Style Button"
+											value="dss-button dss-button--primary"/>
+									<secondary
+											jcr:primaryType="nt:unstructured"
+											text="Secondary Style Button"
+											value="dss-button dss-button--secondary"/>
+									<none
+											jcr:primaryType="nt:unstructured"
+											text="None"
+											value=""/>
+								</items>
+							</cta_style>
+						</items>
+					</item>
+				</items>
+			</primaryButton>
+			<secondaryButton
+					jcr:primaryType="nt:unstructured"
+					sling:resourceType="granite/ui/components/coral/foundation/accordion"
+					composite="{Boolean}true"
+					name="./secondaryButton"
+					class="hide banner-options-showhide-target"
+					showhidetargetvalue="option5">
+				<items jcr:primaryType="nt:unstructured">
+					<item jcr:primaryType="nt:unstructured"
+						  sling:resourceType="granite/ui/components/coral/foundation/well"
+						  jcr:title="Botão Secundário">
+						<items jcr:primaryType="nt:unstructured">
+							<cta_text
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+									fieldLabel="Texto do Botão"
+									maxlength="50"
+									name="./secondaryButton/buttonText"/>
+							<cta_link
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+									fieldLabel="URL do Botão"
+									name="./secondaryButton/buttonLink"
+									rootPath="/content"/>
+							<cta_target
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/coral/foundation/form/select"
+									fieldLabel="Target do Botão"
+									name="./secondaryButton/buttonTarget">
+								<items jcr:primaryType="nt:unstructured">
+									<links
+											jcr:primaryType="nt:unstructured"
+											text="Blank"
+											value="_blank"/>
+									<teaser
+											jcr:primaryType="nt:unstructured"
+											text="Self"
+											value="_self"/>
+								</items>
+							</cta_target>
+							<cta_style
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/coral/foundation/form/select"
+									fieldLabel="Estilo do Botão"
+									name="./secondaryButton/buttonStyle">
+								<items jcr:primaryType="nt:unstructured">
+									<text
+											jcr:primaryType="nt:unstructured"
+											text="Text Style Button"
+											value="dss-button dss-button--text"/>
+									<primary
+											jcr:primaryType="nt:unstructured"
+											text="Primary Style Button"
+											value="dss-button dss-button--primary"/>
+									<secondary
+											jcr:primaryType="nt:unstructured"
+											text="Secondary Style Button"
+											value="dss-button dss-button--secondary"/>
+									<none
+											jcr:primaryType="nt:unstructured"
+											text="None"
+											value=""/>
+								</items>
+							</cta_style>
+						</items>
+					</item>
+				</items>
+			</secondaryButton>
+			<iconFlame
+					jcr:primaryType="nt:unstructured"
+					sling:resourceType="granite/ui/components/coral/foundation/accordion"
+					composite="{Boolean}true"
+					name="./iconFlame">
+				<items jcr:primaryType="nt:unstructured">
+					<item jcr:primaryType="nt:unstructured"
+						  sling:resourceType="granite/ui/components/coral/foundation/well"
+						  jcr:title="Ícone">
+						<items jcr:primaryType="nt:unstructured">
+							<icon_flame
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+									fieldLabel="Nome do Ícone"
+									maxlength="50"
+									name="./iconFlame/iconName"/>
+							<color
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/coral/foundation/form/select"
+									fieldLabel="Cor do Ícone"
+									name="./iconFlame/iconColor">
+								<datasource
+										jcr:primaryType="nt:unstructured"
+										sling:resourceType="/bin/jsonDataDropdown"
+										jsonDataPath="/apps/santander-spa-first/datasource/flame-colors.json"/>
+							</color>
+							<size
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/coral/foundation/form/select"
+									fieldLabel="Tamanho do Ícone"
+									name="./iconFlame/iconSize">
+								<datasource
+										jcr:primaryType="nt:unstructured"
+										sling:resourceType="/bin/jsonDataDropdown"
+										jsonDataPath="/apps/santander-spa-first/datasource/flame-icon-size.json"/>
+							</size>
+							<hover
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/coral/foundation/form/select"
+									fieldLabel="Mudar a cor do background na ação de HOVER"
+									name="./iconFlame/iconHover">
+								<items jcr:primaryType="nt:unstructured">
+									<true
+											jcr:primaryType="nt:unstructured"
+											text="true"
+											value="true"/>
+									<false
+											jcr:primaryType="nt:unstructured"
+											text="Default - False"
+											value="false"/>
+								</items>
+							</hover>
+							<cta_link
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+									fieldLabel="Link do Ícone"
+									name="./iconFlame/iconLink"
+									rootPath="/content"/>
+						</items>
+					</item>
+				</items>
+			</iconFlame>
+			<badgeFlame
+					jcr:primaryType="nt:unstructured"
+					sling:resourceType="granite/ui/components/coral/foundation/accordion"
+					composite="{Boolean}true"
+					name="./badgeFlame">
+				<items jcr:primaryType="nt:unstructured">
+					<item jcr:primaryType="nt:unstructured"
+						  sling:resourceType="granite/ui/components/coral/foundation/well"
+						  jcr:title="Badge">
+						<items jcr:primaryType="nt:unstructured">
+							<list
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/foundation/form/select"
+									class="cq-dialog-dropdown-showhide-multival"
+									cq-dialog-dropdown-showhide-target=".badge-options-showhide-target"
+									fieldLabel="Modelo do Badge"
+									name="./badgeFlame/badgeModel">
+								<items jcr:primaryType="nt:unstructured">
+									<defaultModel
+											jcr:primaryType="nt:unstructured"
+											text="Default Model"
+											value="defaultModel"/>
+									<textModel
+											jcr:primaryType="nt:unstructured"
+											text="Text Model"
+											value="textModel"/>
+									<iconModel
+											jcr:primaryType="nt:unstructured"
+											text="Icon Model"
+											value="iconModel"/>
+								</items>
+							</list>
+							<badge
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+									fieldLabel="Texto do Badge"
+									name="./badgeFlame/badgeText"/>
+							<type
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/coral/foundation/form/select"
+									fieldLabel="Tipo do Badge"
+									name="./badgeFlame/badgeType">
+								<items jcr:primaryType="nt:unstructured">
+									<dark
+											jcr:primaryType="nt:unstructured"
+											text="Dark"
+											value="dark"/>
+									<success
+											jcr:primaryType="nt:unstructured"
+											text="Success"
+											value="success"/>
+								</items>
+							</type>
+						</items>
+					</item>
+				</items>
+			</badgeFlame>
+			<backgroundOptions
+					jcr:primaryType="nt:unstructured"
+					sling:resourceType="granite/ui/components/coral/foundation/accordion"
+					composite="{Boolean}true"
+					name="./backgroundOptions">
+				<items jcr:primaryType="nt:unstructured">
+					<item jcr:primaryType="nt:unstructured"
+						  sling:resourceType="granite/ui/components/coral/foundation/well"
+						  jcr:title="Opções de Plano de Fundo">
+						<items jcr:primaryType="nt:unstructured">
+							<list
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/foundation/form/select"
+									class="cq-dialog-dropdown-showhide-multival"
+									cq-dialog-dropdown-showhide-target=".test-options-showhide-target"
+									fieldLabel="Estilo de Plano de Fundo"
+									name="./backgroundOptions/backgroundVariation">
+								<items jcr:primaryType="nt:unstructured">
+									<color
+											jcr:primaryType="nt:unstructured"
+											text="Cor"
+											value="color"/>
+									<back
+											jcr:primaryType="nt:unstructured"
+											text="Imagem"
+											value="image"/>
+								</items>
+							</list>
+							<backgroundColor
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/foundation/container"
+									class="test-options-showhide-target"
+									showhidetargetvalue="color">
+								<items jcr:primaryType="nt:unstructured">
+									<color
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"
+											fieldDescription="Select background color"
+											fieldLabel="Background Color"
+											name="./backgroundOptions/colorBackground"
+											showProperties="{Boolean}true"/>
+								</items>
+							</backgroundColor>
+							<backgroundImage
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/foundation/container"
+									class="hide test-options-showhide-target"
+									showhidetargetvalue="image">
+								<items jcr:primaryType="nt:unstructured">
+									<image
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+											allowUpload="{Boolean}false"
+											autoStart="{Boolean}false"
+											class="cq-droptarget"
+											fieldLabel="Imagem de Fundo"
+											fileNameParameter="./backgroundOptions/imageName"
+											fileReferenceParameter="./backgroundOptions/imageReference"
+											mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+											multiple="{Boolean}false"
+											name="./backgroundOptions/image"
+											title="Upload Image Asset"
+											uploadUrl="${suffix.path}"
+											useHTML5="{Boolean}true"
+											rootPath="/content/dam/assets-santander/ready"/>
+									<alt
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+											fieldLabel="Texto Auxiliar"
+											maxlength="255"
+											name="./backgroundOptions/altText"/>
+								</items>
+							</backgroundImage>
+						</items>
+					</item>
+				</items>
+			</backgroundOptions>
+			<bannerModel
+					cq:showOnCreate="{Boolean}true"
+					jcr:primaryType="nt:unstructured"
+					jcr:title="Modelo de Banner"
+					sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+				<items jcr:primaryType="nt:unstructured">
+					<list
+							jcr:primaryType="nt:unstructured"
+							sling:resourceType="granite/ui/components/foundation/form/select"
+							class="cq-dialog-dropdown-showhide-multival"
+							cq-dialog-dropdown-showhide-target=".banner-options-showhide-target"
+							fieldLabel="Modelo de Banner"
+							name="./bannerModel/bannerModel">
+						<items jcr:primaryType="nt:unstructured">
+							<option1
+									jcr:primaryType="nt:unstructured"
+									text="Modelo 1"
+									value="option1"/>
+							<option2
+									jcr:primaryType="nt:unstructured"
+									text="Modelo 2"
+									value="option2"/>
+							<option3
+									jcr:primaryType="nt:unstructured"
+									text="Modelo 3"
+									value="option3"/>
+							<option4
+									jcr:primaryType="nt:unstructured"
+									text="Modelo 4"
+									value="option4"/>
+							<option5
+									jcr:primaryType="nt:unstructured"
+									text="Modelo 5"
+									value="option5"/>
+						</items>
+					</list>
+					<verticalContainer
+							jcr:primaryType="nt:unstructured"
+							sling:resourceType="granite/ui/components/foundation/container"
+							class="hide banner-options-showhide-target"
+							showhidetargetvalue="option3">
+						<items jcr:primaryType="nt:unstructured">
+							<verticalOrientation
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/coral/foundation/form/select"
+									fieldLabel="Orientação Vertical"
+									name="./bannerModel/verticalOrientation">
+								<items jcr:primaryType="nt:unstructured">
+									<imageTop
+											jcr:primaryType="nt:unstructured"
+											text="Imagem no Topo"
+											value="imageTop"/>
+									<contentTop
+											jcr:primaryType="nt:unstructured"
+											text="Conteúdo no Topo"
+											value="contentTop"/>
+								</items>
+							</verticalOrientation>
+						</items>
+					</verticalContainer>
+					<horizontalContainer
+							jcr:primaryType="nt:unstructured"
+							sling:resourceType="granite/ui/components/foundation/container"
+							class="hide banner-options-showhide-target"
+							showhidetargetvalue="option1,option2">
+						<items jcr:primaryType="nt:unstructured">
+							<horizontalOrientation
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/coral/foundation/form/select"
+									fieldLabel="Orientação Horizontal"
+									name="./bannerModel/horizontalOrientation">
+								<items jcr:primaryType="nt:unstructured">
+									<imageLeft
+											jcr:primaryType="nt:unstructured"
+											text="Imagem na Esquerda"
+											value="imageLeft"/>
+									<contentLeft
+											jcr:primaryType="nt:unstructured"
+											text="Conteúdo na Esquerda"
+											value="contentLeft"/>
+								</items>
+							</horizontalOrientation>
+						</items>
+					</horizontalContainer>
+					<lightboxOptions
+							jcr:primaryType="nt:unstructured"
+							sling:resourceType="granite/ui/components/foundation/container"
+							class="banner-options-showhide-target"
+							showhidetargetvalue="option5">
+						<items jcr:primaryType="nt:unstructured">
+							<icon
+									cq:showOnCreate="{Boolean}true"
+									jcr:primaryType="nt:unstructured"
+									jcr:title="Ícone"
+									sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+								<items jcr:primaryType="nt:unstructured">
+									<icon_flame
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+											fieldLabel="Nome do Ícone"
+											maxlength="50"
+											name="./lightbox/iconFlame/iconName"/>
+									<color
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/select"
+											fieldLabel="Cor do Ícone"
+											name="./lightbox/iconFlame/iconColor">
+										<datasource
+												jcr:primaryType="nt:unstructured"
+												sling:resourceType="/bin/jsonDataDropdown"
+												jsonDataPath="/apps/santander-spa-first/datasource/flame-colors.json"/>
+									</color>
+									<size
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/select"
+											fieldLabel="Tamanho do Ícone"
+											name="./lightbox/iconFlame/iconSize">
+										<datasource
+												jcr:primaryType="nt:unstructured"
+												sling:resourceType="/bin/jsonDataDropdown"
+												jsonDataPath="/apps/santander-spa-first/datasource/flame-icon-size.json"/>
+									</size>
+									<hover
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/select"
+											fieldLabel="Mudar a cor do background na ação de HOVER"
+											name="./lightbox/iconFlame/iconHover">
+										<items jcr:primaryType="nt:unstructured">
+											<true
+													jcr:primaryType="nt:unstructured"
+													text="true"
+													value="true"/>
+											<false
+													jcr:primaryType="nt:unstructured"
+													text="Default - False"
+													value="false"/>
+										</items>
+									</hover>
+									<cta_link
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+											fieldLabel="Link do Ícone"
+											name="./lightbox/iconFlame/iconLink"
+											rootPath="/content"/>
+								</items>
+							</icon>
+							<primaryTextLightbox
+									cq:showOnCreate="{Boolean}true"
+									jcr:primaryType="nt:unstructured"
+									jcr:title="Texto Primário"
+									sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+								<items jcr:primaryType="nt:unstructured">
+									<selectTextType
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/foundation/form/select"
+											class="cq-dialog-dropdown-showhide-multival"
+											cq-dialog-dropdown-showhide-target=".lightbox-primary-textTypeHtml-showhide-target"
+											fieldLabel="Tipo de Texto"
+											name="./lightbox/primaryText/textTypeHtml">
+										<items jcr:primaryType="nt:unstructured">
+											<textOption
+													jcr:primaryType="nt:unstructured"
+													text="Text"
+													value="text"/>
+											<htmlOption
+													jcr:primaryType="nt:unstructured"
+													text="HTML"
+													value="html"/>
+										</items>
+									</selectTextType>
+									<primaryTextOption
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/foundation/container"
+											class="lightbox-primary-textTypeHtml-showhide-target"
+											showhidetargetvalue="text">
+										<items jcr:primaryType="nt:unstructured">
+											<primaryText
+													jcr:primaryType="nt:unstructured"
+													sling:resourceType="granite/ui/components/foundation/form/textfield"
+													fieldLabel="Texto"
+													maxlength="255"
+													name="./lightbox/primaryText/text"/>
+											<primaryTextType
+													jcr:primaryType="nt:unstructured"
+													sling:resourceType="granite/ui/components/coral/foundation/form/select"
+													fieldLabel="Tipo de Fonte"
+													name="./lightbox/primaryText/textType">
+												<datasource
+														jcr:primaryType="nt:unstructured"
+														sling:resourceType="/bin/jsonDataDropdown"
+														jsonDataPath="/apps/santander-spa-first/datasource/flame-text-styles.json"/>
+											</primaryTextType>
+											<primaryTextColor
+													jcr:primaryType="nt:unstructured"
+													sling:resourceType="granite/ui/components/coral/foundation/form/select"
+													fieldLabel="Cor do Texto"
+													name="./lightbox/primaryText/textColor">
+												<datasource
+														jcr:primaryType="nt:unstructured"
+														sling:resourceType="/bin/jsonDataDropdown"
+														jsonDataPath="/apps/santander-spa-first/datasource/flame-colors.json"/>
+											</primaryTextColor>
+											<primaryTextStyle
+													jcr:primaryType="nt:unstructured"
+													sling:resourceType="granite/ui/components/coral/foundation/form/select"
+													fieldLabel="Estilo do Texto"
+													name="./lightbox/primaryText/textStyle">
+												<items jcr:primaryType="nt:unstructured">
+													<true
+															jcr:primaryType="nt:unstructured"
+															text="Negrito"
+															value="true"/>
+													<none
+															jcr:primaryType="nt:unstructured"
+															text="Sem Negrito"
+															value="false"/>
+												</items>
+											</primaryTextStyle>
+										</items>
+									</primaryTextOption>
+									<primaryHtmlOption
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/foundation/container"
+											class="hide lightbox-primary-textTypeHtml-showhide-target"
+											showhidetargetvalue="html">
+										<items jcr:primaryType="nt:unstructured">
+											<textHtml
+													jcr:primaryType="nt:unstructured"
+													sling:resourceType="granite/ui/components/foundation/form/textarea"
+													fieldLabel="HTML"
+													maxlength="3000"
+													name="./lightbox/primaryText/textHtml"/>
+
+										</items>
+									</primaryHtmlOption>
+								</items>
+							</primaryTextLightbox>
+							<secondaryTextLightbox
+									cq:showOnCreate="{Boolean}true"
+									jcr:primaryType="nt:unstructured"
+									jcr:title="Texto Secundário"
+									sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+								<items jcr:primaryType="nt:unstructured">
+									<selectTextType
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/foundation/form/select"
+											class="cq-dialog-dropdown-showhide-multival"
+											cq-dialog-dropdown-showhide-target=".lightbox-secondary-textTypeHtml-showhide-target"
+											fieldLabel="Tipo de Texto"
+											name="./lightbox/secondaryText/textTypeHtml">
+										<items jcr:primaryType="nt:unstructured">
+											<textOption
+													jcr:primaryType="nt:unstructured"
+													text="Text"
+													value="text"/>
+											<htmlOption
+													jcr:primaryType="nt:unstructured"
+													text="HTML"
+													value="html"/>
+										</items>
+									</selectTextType>
+									<secondaryTextOption
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/foundation/container"
+											class="lightbox-secondary-textTypeHtml-showhide-target"
+											showhidetargetvalue="text">
+										<items jcr:primaryType="nt:unstructured">
+											<secondaryText
+													jcr:primaryType="nt:unstructured"
+													sling:resourceType="granite/ui/components/foundation/form/textfield"
+													fieldLabel="Texto"
+													maxlength="255"
+													name="./lightbox/secondaryText/text"/>
+											<secondaryTextType
+													jcr:primaryType="nt:unstructured"
+													sling:resourceType="granite/ui/components/coral/foundation/form/select"
+													fieldLabel="Tipo de Fonte"
+													name="./lightbox/secondaryText/textType">
+												<datasource
+														jcr:primaryType="nt:unstructured"
+														sling:resourceType="/bin/jsonDataDropdown"
+														jsonDataPath="/apps/santander-spa-first/datasource/flame-text-styles.json"/>
+											</secondaryTextType>
+											<secondaryTextColor
+													jcr:primaryType="nt:unstructured"
+													sling:resourceType="granite/ui/components/coral/foundation/form/select"
+													fieldLabel="Cor do Texto"
+													name="./lightbox/secondaryText/textColor">
+												<datasource
+														jcr:primaryType="nt:unstructured"
+														sling:resourceType="/bin/jsonDataDropdown"
+														jsonDataPath="/apps/santander-spa-first/datasource/flame-colors.json"/>
+											</secondaryTextColor>
+											<secondaryTextStyle
+													jcr:primaryType="nt:unstructured"
+													sling:resourceType="granite/ui/components/coral/foundation/form/select"
+													fieldLabel="Estilo do Texto"
+													name="./lightbox/secondaryText/textStyle">
+												<items jcr:primaryType="nt:unstructured">
+													<true
+															jcr:primaryType="nt:unstructured"
+															text="Negrito"
+															value="true"/>
+													<none
+															jcr:primaryType="nt:unstructured"
+															text="Sem Negrito"
+															value="false"/>
+												</items>
+											</secondaryTextStyle>
+										</items>
+									</secondaryTextOption>
+									<secondaryHtmlOption
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/foundation/container"
+											class="hide lightbox-secondary-textTypeHtml-showhide-target"
+											showhidetargetvalue="html">
+										<items jcr:primaryType="nt:unstructured">
+											<textHtml
+													jcr:primaryType="nt:unstructured"
+													sling:resourceType="granite/ui/components/foundation/form/textarea"
+													fieldLabel="HTML"
+													maxlength="3000"
+													name="./lightbox/secondaryText/textHtml"/>
+
+										</items>
+									</secondaryHtmlOption>
+								</items>
+							</secondaryTextLightbox>
+							<tertiaryTextLightbox
+									cq:showOnCreate="{Boolean}true"
+									jcr:primaryType="nt:unstructured"
+									jcr:title="Texto Terciário"
+									sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+								<items jcr:primaryType="nt:unstructured">
+									<selectTextType
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/foundation/form/select"
+											class="cq-dialog-dropdown-showhide-multival"
+											cq-dialog-dropdown-showhide-target=".lightbox-tertiary-textTypeHtml-showhide-target"
+											fieldLabel="Tipo de Texto"
+											name="./lightbox/tertiaryText/textTypeHtml">
+										<items jcr:primaryType="nt:unstructured">
+											<textOption
+													jcr:primaryType="nt:unstructured"
+													text="Text"
+													value="text"/>
+											<htmlOption
+													jcr:primaryType="nt:unstructured"
+													text="HTML"
+													value="html"/>
+										</items>
+									</selectTextType>
+									<tertiaryTextOption
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/foundation/container"
+											class="lightbox-tertiary-textTypeHtml-showhide-target"
+											showhidetargetvalue="text">
+										<items jcr:primaryType="nt:unstructured">
+											<tertiaryText
+													jcr:primaryType="nt:unstructured"
+													sling:resourceType="granite/ui/components/foundation/form/textfield"
+													fieldLabel="Texto"
+													maxlength="255"
+													name="./lightbox/tertiaryText/text"/>
+											<tertiaryTextType
+													jcr:primaryType="nt:unstructured"
+													sling:resourceType="granite/ui/components/coral/foundation/form/select"
+													fieldLabel="Tipo de Fonte"
+													name="./lightbox/tertiaryText/textType">
+												<datasource
+														jcr:primaryType="nt:unstructured"
+														sling:resourceType="/bin/jsonDataDropdown"
+														jsonDataPath="/apps/santander-spa-first/datasource/flame-text-styles.json"/>
+											</tertiaryTextType>
+											<tertiaryTextColor
+													jcr:primaryType="nt:unstructured"
+													sling:resourceType="granite/ui/components/coral/foundation/form/select"
+													fieldLabel="Cor do Texto"
+													name="./lightbox/tertiaryText/textColor">
+												<datasource
+														jcr:primaryType="nt:unstructured"
+														sling:resourceType="/bin/jsonDataDropdown"
+														jsonDataPath="/apps/santander-spa-first/datasource/flame-colors.json"/>
+											</tertiaryTextColor>
+											<tertiaryTextStyle
+													jcr:primaryType="nt:unstructured"
+													sling:resourceType="granite/ui/components/coral/foundation/form/select"
+													fieldLabel="Estilo do Texto"
+													name="./lightbox/tertiaryText/textStyle">
+												<items jcr:primaryType="nt:unstructured">
+													<true
+															jcr:primaryType="nt:unstructured"
+															text="Negrito"
+															value="true"/>
+													<none
+															jcr:primaryType="nt:unstructured"
+															text="Sem Negrito"
+															value="false"/>
+												</items>
+											</tertiaryTextStyle>
+										</items>
+									</tertiaryTextOption>
+									<tertiaryHtmlOption
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/foundation/container"
+											class="hide lightbox-tertiary-textTypeHtml-showhide-target"
+											showhidetargetvalue="html">
+										<items jcr:primaryType="nt:unstructured">
+											<textHtml
+													jcr:primaryType="nt:unstructured"
+													sling:resourceType="granite/ui/components/foundation/form/textarea"
+													fieldLabel="HTML"
+													maxlength="3000"
+													name="./lightbox/tertiaryText/textHtml"/>
+
+										</items>
+									</tertiaryHtmlOption>
+								</items>
+							</tertiaryTextLightbox>
+							<backgroundOptions
+									cq:showOnCreate="{Boolean}true"
+									jcr:primaryType="nt:unstructured"
+									jcr:title="Opções de Plano de Fundo do Lightbox"
+									sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+								<items jcr:primaryType="nt:unstructured">
+									<list
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/foundation/form/select"
+											class="cq-dialog-dropdown-showhide-multival"
+											cq-dialog-dropdown-showhide-target=".lbbc-options-showhide-target"
+											fieldLabel="Estilo de Plano de Fundo"
+											name="./lightbox/backgroundOptions/backgroundVariation">
+										<items jcr:primaryType="nt:unstructured">
+											<color
+													jcr:primaryType="nt:unstructured"
+													text="Cor"
+													value="color"/>
+											<back
+													jcr:primaryType="nt:unstructured"
+													text="Imagem"
+													value="image"/>
+										</items>
+									</list>
+									<backgroundColor
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/foundation/container"
+											class="lbbc-options-showhide-target"
+											showhidetargetvalue="color">
+										<items jcr:primaryType="nt:unstructured">
+											<color
+													jcr:primaryType="nt:unstructured"
+													sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"
+													fieldDescription="Select background color"
+													fieldLabel="Background Color"
+													name="./lightbox/backgroundOptions/colorBackground"
+													showProperties="{Boolean}true"/>
+										</items>
+									</backgroundColor>
+									<backgroundImage
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/foundation/container"
+											class="hide lbbc-options-showhide-target"
+											showhidetargetvalue="image">
+										<items jcr:primaryType="nt:unstructured">
+											<image
+													jcr:primaryType="nt:unstructured"
+													sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+													allowUpload="{Boolean}false"
+													autoStart="{Boolean}false"
+													class="cq-droptarget"
+													fieldLabel="Imagem de Fundo"
+													fileNameParameter="./lightbox/backgroundOptions/imageName"
+													fileReferenceParameter="./lightbox/backgroundOptions/imageReference"
+													mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+													multiple="{Boolean}false"
+													name="./lightbox/backgroundOptions/image"
+													title="Upload Image Asset"
+													uploadUrl="${suffix.path}"
+													useHTML5="{Boolean}true"
+													rootPath="/content/dam/assets-santander/ready"/>
+											<alt
+													jcr:primaryType="nt:unstructured"
+													sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+													fieldLabel="Texto Auxiliar"
+													maxlength="255"
+													name="./lightbox/backgroundOptions/altText"/>
+										</items>
+									</backgroundImage>
+								</items>
+							</backgroundOptions>
+						</items>
+					</lightboxOptions>
+				</items>
+			</bannerModel>
+			<carouselModel
+					cq:showOnCreate="{Boolean}true"
+					jcr:primaryType="nt:unstructured"
+					jcr:title="Modelo de Carrossel"
+					sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+				<items jcr:primaryType="nt:unstructured">
+					<list
+							jcr:primaryType="nt:unstructured"
+							sling:resourceType="granite/ui/components/foundation/form/select"
+							fieldLabel="Modelo de Carrossel"
+							name="./carouselModel">
+						<items jcr:primaryType="nt:unstructured">
+							<option1
+									jcr:primaryType="nt:unstructured"
+									text="Modelo 1"
+									value="option1"/>
+							<option2
+									jcr:primaryType="nt:unstructured"
+									text="Modelo 2"
+									value="option2"/>
+							<option3
+									jcr:primaryType="nt:unstructured"
+									text="Modelo 3"
+									value="option3"/>
+							<option4
+									jcr:primaryType="nt:unstructured"
+									text="Modelo 4"
+									value="option4"/>
+						</items>
+					</list>
+				</items>
+			</carouselModel>
+		</items>
+	</content>
+</jcr:root>
