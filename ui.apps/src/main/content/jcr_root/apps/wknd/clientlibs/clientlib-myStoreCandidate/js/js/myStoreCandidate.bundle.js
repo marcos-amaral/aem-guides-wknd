@@ -1,0 +1,1 @@
+!function(){var t,e;t=ContextHubJQ,e={},myStoreCandidate=function(i,n){this.config=t.extend(!0,{},e,n),this.init(i,this.config)},ContextHub.Utils.inheritance.inherit(myStoreCandidate,ContextHub.Store.PersistedStore),ContextHub.Utils.storeCandidates.registerStoreCandidate(myStoreCandidate,"mystorecandidate",0)}();

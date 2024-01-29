@@ -19,10 +19,11 @@ const resolve = {
 module.exports = {
     resolve: resolve,
     entry: {
-        site: SOURCE_ROOT + '/site/main.js'
+        site: SOURCE_ROOT + '/site/main.js',
+        myStoreCandidate: SOURCE_ROOT + '/myStoreCandidate/main.js'
     },
     output: {
-        filename: 'clientlib-site/js/[name].bundle.js',
+        filename: 'clientlib-[name]/js/[name].bundle.js',
         path: path.resolve(__dirname, 'dist')
     },
     optimization: {
