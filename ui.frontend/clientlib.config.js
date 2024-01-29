@@ -73,7 +73,7 @@ module.exports = {
     {
       ...libsBaseConfig,
       name: 'clientlib-myStoreCandidate',
-      categories: ['contexthub.store.myStoreCandidate'],
+      categories: ['contexthub.store.contexthub.mystorecandidate'],
       dependencies: ['wknd.dependencies'],
       assets: {
         // Copy entrypoint scripts and stylesheets into the respective ClientLib
