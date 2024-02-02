@@ -1,0 +1,6 @@
+{
+    "scripts": [
+        "create service user sourcedCodeSystemUser with path /home/users/system/sourcedCode",
+        "set ACL for sourcedCodeSystemUser\n\tallow jcr:all on /content/dam\nend"
+    ]
+}
