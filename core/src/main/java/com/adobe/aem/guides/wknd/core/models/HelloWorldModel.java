@@ -74,11 +74,12 @@ public class HelloWorldModel {
                 .map(pm -> pm.getContainingPage(currentResource))
                 .map(Page::getPath).orElse("");
 
-        String referrer = request.getQueryString();
+        String queryString = request.getQueryString();
+        String referrer = request.getHeader(HttpHeaders.REFERER);
         ContentFragment contentFragment = null;
         
-        if (!referrer.contains(EDITOR_PARAM) && referrer.contains(AUTHOR_PARAM)) {
-            String[] campaignIds = fragments.getCampaignIds(referrer);
+        if (!referrer.contains(EDITOR_PARAM) && queryString.contains(AUTHOR_PARAM)) {
+            String[] campaignIds = fragments.getCampaignIds(queryString);
 
             if (campaignIds.length > 0 && campaignIds[0] != null) {
                 String[] vds = campaignIds[0].split("\\|");
@@ -92,11 +93,15 @@ public class HelloWorldModel {
             message = "Hello World!\n"
                 + "Resource type is: " + resourceType + "\n"
                 + "Current page is:  " + currentPagePath + "\n"
+                + "queryString:  " + queryString + "\n"
+                + "referrer:  " + referrer + "\n"
                 + "author:  " + (contentFragment!=null?contentFragment.getElement("firstName").getContent()+" "+contentFragment.getElement("lastName").getContent():"") + "\n";
 
         } else {
             message = "Hello World!\n"
                 + "Resource type is: " + resourceType + "\n"
+                + "queryString:  " + queryString + "\n"
+                + "referrer:  " + referrer + "\n"
                 + "Current page is:  " + currentPagePath + "\n";
         }
 
