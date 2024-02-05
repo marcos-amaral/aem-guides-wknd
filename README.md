@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # AEM WKND Sites Project
 
 ## Adobe Experience Manager compatibility
