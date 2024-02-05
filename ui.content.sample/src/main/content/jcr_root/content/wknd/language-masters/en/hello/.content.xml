@@ -2,11 +2,11 @@
 <jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2020-11-13T13:19:57.753-08:00"
+        cq:lastModified="{Date}2024-02-05T09:31:41.455-03:00"
         cq:lastModifiedBy="admin"
         cq:template="/conf/wknd/settings/wcm/templates/content-page-template"
         jcr:primaryType="cq:PageContent"
-        jcr:title="Sign In"
+        jcr:title="Hello"
         sling:resourceType="wknd/components/page">
         <root
             jcr:primaryType="nt:unstructured"
@@ -19,21 +19,13 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wknd/components/container"
                 layout="responsiveGrid">
-                <experiencefragment
-                    jcr:created="{Date}2020-11-12T20:48:50.165-08:00"
+                <helloworld
+                    jcr:created="{Date}2024-02-05T09:31:41.451-03:00"
                     jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2020-11-12T20:52:20.777-08:00"
+                    jcr:lastModified="{Date}2024-02-05T09:31:41.451-03:00"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="wknd/components/experiencefragment"
-                    fragmentVariationPath="/content/experience-fragments/wknd/language-masters/en/site/sign-in/sign-in-page">
-                    <cq:responsive jcr:primaryType="nt:unstructured">
-                        <default
-                            jcr:primaryType="nt:unstructured"
-                            offset="0"
-                            width="6"/>
-                    </cq:responsive>
-                </experiencefragment>
+                    sling:resourceType="wknd/components/helloworld"/>
             </container>
         </root>
     </jcr:content>
