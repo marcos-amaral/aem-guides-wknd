@@ -88,12 +88,19 @@ public class HelloWorldModel {
                     updateModelFromCF(contentFragment);
                 }
             }
-        }
 
-        message = "Hello World!\n"
+            message = "Hello World!\n"
                 + "Resource type is: " + resourceType + "\n"
                 + "Current page is:  " + currentPagePath + "\n"
                 + "author:  " + (contentFragment!=null?contentFragment.getElement("firstName").getContent()+" "+contentFragment.getElement("lastName").getContent():"") + "\n";
+
+        } else {
+            message = "Hello World!\n"
+                + "Resource type is: " + resourceType + "\n"
+                + "Current page is:  " + currentPagePath + "\n";
+        }
+
+        
 
     }
 
