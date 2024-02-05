@@ -26,8 +26,7 @@
 # System user (OSGi config)
 
 ```
-*org.apache.sling.jcr.repoinit.RepositoryInitializer~wknd.cfg.json*
-
+\ui.config\src\main\content\jcr_root\apps\wknd\osgiconfig\config\org.apache.sling.jcr.repoinit.RepositoryInitializer~wknd.cfg.json
 {
     "scripts": [
         "create service user sourcedCodeSystemUser with path /home/users/system/sourcedCode",
@@ -37,8 +36,7 @@
 ```
 
 ```
-*org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended~wknd.cfg.json*
-
+\ui.config\src\main\content\jcr_root\apps\wknd\osgiconfig\config\org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended~wknd.cfg.json
 {
     "user.mapping": [
         "aem-guides-wknd.core:sourcedCodeReader=sourcedCodeSystemUser"
