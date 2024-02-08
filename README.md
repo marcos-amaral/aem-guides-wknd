@@ -1,9 +1,13 @@
-## Form Container Component
-https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-container.html?lang=en  
+# Sending form to SMTP server
+Example of a page with a form that sends a message to a pre-configured SMTP server
+
+## 📋 References
+
+### 📦 [Form Container Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-container.html?lang=en)
+  
 ![image](https://github.com/marcos-amaral/aem-guides-wknd/assets/79855686/ca47f31a-da84-4c27-80b7-7f50fcfeb56d)
 
-## Email Service
-https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/networking/examples/email-service.html?lang=en  
+### ⚙️ [Email Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/networking/examples/email-service.html?lang=en)
 
 ### OSGi config
 ```
