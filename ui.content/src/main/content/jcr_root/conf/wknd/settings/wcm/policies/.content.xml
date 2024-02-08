@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
     jcr:mixinTypes="[rep:AccessControllable]"
     jcr:primaryType="cq:Page">
     <rep:policy/>
@@ -36,14 +36,15 @@
                 </content-default>
                 <policy_213106331986985
                     cq:styleDefaultElement="main"
-                    jcr:lastModified="{Date}2020-07-09T08:11:09.069-07:00"
+                    jcr:lastModified="{Date}2024-02-08T09:22:25.536-03:00"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="WKND Content"
                     sling:resourceType="wcm/core/components/policy/policy"
                     backgroundColorEnabled="true"
                     backgroundImageEnabled="true"
-                    components="[group:WKND.Content]">
+                    components="[/libs/core/wcm/components/form/container/v2/container,/libs/core/wcm/components/form/button/v2/button,/libs/core/wcm/components/form/text/v2/text,group:WKND.Content]"
+                    layoutDisabled="false">
                     <jcr:content
                         cq:lastReplicated="{Date}2019-10-22T13:34:50.533-07:00"
                         cq:lastReplicatedBy="admin"
@@ -466,9 +467,8 @@
                     allowedRenditionWidths="[100,200,300,400,500,600,700,800,900,1000,1100,1200,1600]"
                     allowUpload="true"
                     altValueFromDAM="true"
-                    disableLazyLoading="true"
+                    disableLazyLoading="false"
                     displayPopupTitle="true"
-                    enableAssetDelivery="true"
                     isDecorative="false"
                     jpegQuality="{Long}60"
                     titleValueFromDAM="true"
@@ -1063,6 +1063,7 @@
                     jcr:title="WKND Site Theme"
                     sling:resourceType="wcm/core/components/policy/policy"
                     clientlibs="[wknd.site,wknd.base]"
+                    clientlibsAsync="true"
                     clientlibsJsHead="wknd.dependencies">
                     <jcr:content
                         cq:lastReplicated="{Date}2019-10-22T13:34:50.533-07:00"
@@ -1079,7 +1080,8 @@
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Experience Fragment Web"
                     sling:resourceType="wcm/core/components/policy/policy"
-                    clientlibs="[wknd.site,wknd.base]">
+                    clientlibs="[wknd.site,wknd.base]"
+                    clientlibsAsync="true">
                     <jcr:content jcr:primaryType="nt:unstructured"/>
                 </policy_1572461714642>
             </xfpage>
